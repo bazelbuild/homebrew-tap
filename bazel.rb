@@ -26,7 +26,6 @@ class Bazel < Formula
     system "./bazel-#{version}-installer-darwin-x86_64.sh", "--prefix=#{buildpath}"
     bin.install 'lib/bazel/bin/bazel' => 'bazel'
     bin.install 'lib/bazel/bin/bazel-real' => 'bazel-real'
-    bin.env_script_all_files(libexec / 'bin', Language::Java.overridable_java_home_env)
     bash_completion.install 'lib/bazel/bin/bazel-complete.bash'
   end
 
