@@ -21,7 +21,7 @@ class Ibazel < Formula
 
   bottle :unneeded
 
-  depends_on "bazel" => :install
+  depends_on "bazelbuild/tap/bazel" => :install
 
   def install
     system 'bazel', 'build', '--config=release', '--experimental_platforms=@io_bazel_rules_go//go/toolchain:darwin_amd64', '//ibazel:ibazel'
