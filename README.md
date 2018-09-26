@@ -6,5 +6,5 @@ This repository contains a collection of Homebrew (aka, Brew) "formulae" for Baz
 ```
 $ brew tap bazelbuild/tap
 $ brew tap-pin bazelbuild/tap
-$ brew install bazel
+$ brew install bazelbuild/tap/bazel
 ```
