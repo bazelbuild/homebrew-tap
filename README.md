@@ -8,3 +8,9 @@ $ brew tap bazelbuild/tap
 $ brew tap-pin bazelbuild/tap
 $ brew install bazel
 ```
+
+or alternatively you can refer to formula by its full name
+
+```
+$ brew install bazelbuild/tap/bazel
+```
