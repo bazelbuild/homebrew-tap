@@ -29,6 +29,12 @@ class Bazel < Formula
     bash_completion.install 'lib/bazel/bin/bazel-complete.bash'
   end
 
+  devel do
+    version '0.18.0rc8'
+    url "https://releases.bazel.build/0.18.0/rc8/bazel-#{version}-installer-darwin-x86_64.sh", using: :nounzip
+    sha256 'a41dd7af6b19b914619a603e4e71445a7bfa87455429e0517b34f6ac21b474b0'
+  end
+
   test do
     touch testpath / 'WORKSPACE'
     (testpath / 'Main.java').write <<~EOS
