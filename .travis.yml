@@ -2,6 +2,6 @@ language: objective-c
 before_install:
   - brew update >/dev/null
 script:
-  - brew audit ./Formula/*.rb
-  - brew install -v ./Formula/*.rb
-  - brew test ./Formula/*.rb
+  - brew audit ./*.rb
+  - brew install -v ./*.rb
+  - brew test ./*.rb
