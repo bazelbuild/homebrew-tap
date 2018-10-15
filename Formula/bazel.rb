@@ -15,14 +15,14 @@
 class Bazel < Formula
   desc 'Bazel is a fast, scalable, multi-language and extensible build system'
   homepage 'https://bazel.build/'
+  url "https://releases.bazel.build/0.18.0/release/bazel-0.18.0-installer-darwin-x86_64.sh", using: :nounzip
   version '0.18.0'
-  url "https://releases.bazel.build/#{version}/release/bazel-#{version}-installer-darwin-x86_64.sh", using: :nounzip
   sha256 '6f07346c72d9eaea0561386a1dc49ae0b8a60f39b180cbbab930e705f3d7a3c4'
 
   bottle :unneeded
 
   def install
-    system 'chmod', '0555', "./bazel-#{version}-installer-darwin-x86_64.sh"
+    chmod 0555, "bazel-#{version}-installer-darwin-x86_64.sh"
     system "./bazel-#{version}-installer-darwin-x86_64.sh", "--prefix=#{buildpath}"
     bin.install 'lib/bazel/bin/bazel' => 'bazel'
     bin.install 'lib/bazel/bin/bazel-real' => 'bazel-real'
@@ -49,4 +49,3 @@ class Bazel < Formula
     system 'bazel-bin/main'
   end
 end
-

@@ -15,13 +15,12 @@
 class Ibazel < Formula
   desc 'IBazel is a tool for building Bazel targets when source files change.'
   homepage 'https://github.com/bazelbuild/bazel-watcher'
-  version '0.6.0'
-  url "https://codeload.github.com/bazelbuild/bazel-watcher/tar.gz/v0.6.0"
+  url "https://github.com/bazelbuild/bazel-watcher/archive/0.6.0"
   sha256 '819ae4ff201f62e769e627335b122c84a472671b80d6fa0407b157c0c982b219'
 
   bottle :unneeded
 
-  depends_on "bazelbuild/tap/bazel" => :install
+  depends_on "bazelbuild/tap/bazel" => :build
 
   def install
     system 'bazel', 'build', '--config=release', '--experimental_platforms=@io_bazel_rules_go//go/toolchain:darwin_amd64', '//ibazel:ibazel'
