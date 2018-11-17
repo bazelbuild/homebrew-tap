@@ -15,8 +15,8 @@
 class Ibazel < Formula
   desc 'IBazel is a tool for building Bazel targets when source files change.'
   homepage 'https://github.com/bazelbuild/bazel-watcher'
-  url "https://github.com/bazelbuild/bazel-watcher/archive/v0.6.0.tar.gz"
-  sha256 '819ae4ff201f62e769e627335b122c84a472671b80d6fa0407b157c0c982b219'
+  url "https://github.com/bazelbuild/bazel-watcher/archive/v0.7.0.tar.gz"
+  sha256 '180d911e501339027a9ae54bf10320c9280a3aa215a926b8a6932dfbb20b801f'
 
   bottle :unneeded
 
