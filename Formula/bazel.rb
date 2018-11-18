@@ -27,6 +27,7 @@ class Bazel < Formula
     bin.install 'lib/bazel/bin/bazel' => 'bazel'
     bin.install 'lib/bazel/bin/bazel-real' => 'bazel-real'
     bash_completion.install 'lib/bazel/bin/bazel-complete.bash'
+    zsh_completion.install 'lib/bazel/bin/_bazel'
   end
 
   test do
