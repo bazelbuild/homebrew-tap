@@ -26,7 +26,7 @@ class Ibazel < Formula
   depends_on "bazelbuild/tap/bazel" => :build
 
   def install
-    system 'bazel', 'build', '--config=release', '--experimental_platforms=@io_bazel_rules_go//go/toolchain:darwin_amd64', '//ibazel:ibazel'
+    system 'bazel', 'build', '--config=release', '--verbose_failures', '--experimental_platforms=@io_bazel_rules_go//go/toolchain:darwin_amd64', '//ibazel:ibazel'
     bin.install 'bazel-bin/ibazel/darwin_amd64_pure_stripped/ibazel' => 'ibazel'
   end
 
