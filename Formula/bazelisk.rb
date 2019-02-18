@@ -35,4 +35,4 @@ class Bazelisk < Formula
       system bin / 'bazel', 'version'
     end
   end
-  
+    
