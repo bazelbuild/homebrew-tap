@@ -4,6 +4,10 @@ osx_image: xcode10.1
 before_install:
   - brew update >/dev/null
 script:
-  - brew audit ./Formula/*.rb
-  - brew install -v ./Formula/*.rb
-  - brew test ./Formula/*.rb
+  - |
+    for f in $( ls ./Formula/*.rb ); do
+      brew audit $f
+      brew install -v $f
+      brew test $f
+      brew uninstall $f
+    done
