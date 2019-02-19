@@ -31,7 +31,9 @@ class Bazelisk < Formula
   end
 
   test do
-    # Simply run bazelisk to see whether it finished
+    # Simply run bazelisk to see whether it finished. Use a hardcoded version number to avoid calling the GitHub API.
+    touch testpath / 'WORKSPACE'
+    (testpath / '.bazelversion').write "0.22.0"
     system bin / 'bazel', 'version'
   end
 end
