@@ -16,6 +16,7 @@ class Bazelisk < Formula
   desc 'Bazelisk is a user-friendly launcher for Bazel.'
   homepage 'https://github.com/philwo/bazelisk'
   url "https://github.com/philwo/bazelisk/releases/download/v0.0.2/bazelisk-darwin-amd64"
+  version '0.0.2'
     
   # To generate run:
   # curl -L -N -s https://github.com/philwo/bazelisk/releases/download/v0.0.2/bazelisk-darwin-amd64 | shasum -a 256
