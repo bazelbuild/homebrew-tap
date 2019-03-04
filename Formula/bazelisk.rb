@@ -15,12 +15,12 @@
 class Bazelisk < Formula
   desc 'Bazelisk is a user-friendly launcher for Bazel.'
   homepage 'https://github.com/philwo/bazelisk'
-  url "https://github.com/philwo/bazelisk/releases/download/v0.0.1/bazelisk-darwin-amd64"
+  url "https://github.com/philwo/bazelisk/releases/download/v0.0.2/bazelisk-darwin-amd64"
     
   # To generate run:
-  # curl -L -N -s https://github.com/philwo/bazelisk/releases/download/v0.0.1/bazelisk-darwin-amd64 | shasum -a 256
+  # curl -L -N -s https://github.com/philwo/bazelisk/releases/download/v0.0.2/bazelisk-darwin-amd64 | shasum -a 256
   # on MacOS
-  sha256 'c5da312c70a8540766cd275bdac46e1cc14ab29c3282f70e64af4e046a0a99bc'
+  sha256 'fb043aff1564f81fd5209d6b2f7de300378f5464199cf8dd22a239948b06b2e0'
 
   bottle :unneeded
 
