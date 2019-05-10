@@ -13,27 +13,26 @@
 # limitations under the License.
 
 class Ibazel < Formula
-  desc 'IBazel is a tool for building Bazel targets when source files change.'
-  homepage 'https://github.com/bazelbuild/bazel-watcher'
-  url "https://github.com/bazelbuild/bazel-watcher/archive/v0.8.2.tar.gz"
-  
+  desc "Tool for building Bazel targets when source files change"
+  homepage "https://github.com/bazelbuild/bazel-watcher"
+  url "https://github.com/bazelbuild/bazel-watcher/releases/download/v0.10.2/ibazel_darwin_amd64"
+  version "0.10.2"
+
   # To generate run:
-  # curl https://codeload.github.com/bazelbuild/bazel-watcher/tar.gz/v0.8.2 | sha256sum
-  sha256 '26f5125218fad2741d3caf937b02296d803900e5f153f5b1f733f15391b9f9b4'
+  # curl -L -N -s https://github.com/bazelbuild/bazel-watcher/releases/download/v0.10.2/ibazel_darwin_amd64 | shasum -a 256
+  # on macOS
+  sha256 "f8df6cb8c5068aaec65b0428fec81504fae21424c8956bc57dab812547ba5e57"
 
   bottle :unneeded
 
-  depends_on "bazelbuild/tap/bazel" => :build
-
   def install
-    system 'bazel', 'build', '--config=release', '--verbose_failures', '--experimental_platforms=@io_bazel_rules_go//go/toolchain:darwin_amd64', '//ibazel:ibazel'
-    bin.install 'bazel-bin/ibazel/darwin_amd64_pure_stripped/ibazel' => 'ibazel'
+    bin.install "ibazel_darwin_amd64" => "ibazel"
   end
 
   test do
-    # Since ibazel loops in most cases the quickest check of valididty
+    # Since ibazel loops in most cases the quickest check of validity
     # I can think of is to get the version output which happens when
     # invoked without any arguments.
-    system bin / 'ibazel'
+    system bin/"ibazel"
   end
 end
