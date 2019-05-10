@@ -13,28 +13,29 @@
 # limitations under the License.
 
 class Bazelisk < Formula
-  desc 'Bazelisk is a user-friendly launcher for Bazel.'
-  homepage 'https://github.com/philwo/bazelisk'
+  desc "User-friendly launcher for Bazel"
+  homepage "https://github.com/philwo/bazelisk"
   url "https://github.com/philwo/bazelisk/releases/download/v0.0.4/bazelisk-darwin-amd64"
-  version '0.0.4'
-    
+  version "0.0.4"
+
   # To generate run:
   # curl -L -N -s https://github.com/philwo/bazelisk/releases/download/v0.0.4/bazelisk-darwin-amd64 | shasum -a 256
-  # on MacOS
-  sha256 'c764ad27a9a7f9bd976b1b7321bfedc7d69c60f9ebdf1ad324dddd3e1f5806fe'
+  # on macOS
+  sha256 "c764ad27a9a7f9bd976b1b7321bfedc7d69c60f9ebdf1ad324dddd3e1f5806fe"
 
   bottle :unneeded
 
   conflicts_with "bazelbuild/tap/bazel", :because => "Bazelisk replaces the bazel binary"
 
   def install
-    bin.install 'bazelisk-darwin-amd64' => 'bazel'
+    bin.install "bazelisk-darwin-amd64" => "bazel"
   end
 
   test do
-    # Simply run bazelisk to see whether it finished. Use a hardcoded version number to avoid calling the GitHub API.
-    touch testpath / 'WORKSPACE'
-    (testpath / '.bazelversion').write "0.22.0"
-    system bin / 'bazel', 'version'
+    # Simply run bazelisk to see whether it finished. Use a hardcoded version
+    # number to avoid calling the GitHub API.
+    touch testpath/"WORKSPACE"
+    (testpath/".bazelversion").write "0.22.0"
+    system bin/"bazel", "version"
   end
 end
