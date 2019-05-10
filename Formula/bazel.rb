@@ -13,40 +13,40 @@
 # limitations under the License.
 
 class Bazel < Formula
-  desc 'Bazel is a fast, scalable, multi-language and extensible build system'
-  homepage 'https://bazel.build/'
-  url "https://releases.bazel.build/0.25.0/release/bazel-0.25.0-installer-darwin-x86_64.sh", using: :nounzip
-  version '0.25.0'
-  sha256 '3a31209490b34939d8324589cce3c232ee212baac7ee779ef232da3b7b30a215'
+  desc "Fast, scalable, multi-language and extensible build system"
+  homepage "https://bazel.build/"
+  url "https://releases.bazel.build/0.25.1/release/bazel-0.25.1-installer-darwin-x86_64.sh", :using => :nounzip
+  version "0.25.1"
+  sha256 "007948e6050967de32f8266c872c23087df1333bd5668d3a2d61764b9cd9e889"
 
   bottle :unneeded
 
   def install
     chmod 0555, "bazel-#{version}-installer-darwin-x86_64.sh"
     system "./bazel-#{version}-installer-darwin-x86_64.sh", "--prefix=#{buildpath}"
-    bin.install 'lib/bazel/bin/bazel' => 'bazel'
-    bin.install 'lib/bazel/bin/bazel-real' => 'bazel-real'
-    bash_completion.install 'lib/bazel/bin/bazel-complete.bash'
-    zsh_completion.install 'lib/bazel/bin/_bazel'
+    bin.install "lib/bazel/bin/bazel" => "bazel"
+    bin.install "lib/bazel/bin/bazel-real" => "bazel-real"
+    bash_completion.install "lib/bazel/bin/bazel-complete.bash"
+    zsh_completion.install "lib/bazel/bin/_bazel"
   end
 
   test do
-    touch testpath / 'WORKSPACE'
-    (testpath / 'Main.java').write <<~EOS
+    touch testpath/"WORKSPACE"
+    (testpath/"Main.java").write <<~EOS
       public class Main {
-	public static void main(String... args) {
+        public static void main(String... args) {
           System.out.println("Hello world!");
         }
       }
     EOS
-    (testpath / 'BUILD').write <<~EOS
+    (testpath/"BUILD").write <<~EOS
       java_binary(
         name = "main",
-	srcs = ["Main.java"],
+        srcs = ["Main.java"],
         main_class = "Main",
       )
     EOS
-    system bin / 'bazel', 'build', '//:main'
-    system 'bazel-bin/main'
+    system bin/"bazel", "build", "//:main"
+    system "bazel-bin/main"
   end
 end
