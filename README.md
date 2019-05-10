@@ -5,19 +5,17 @@ This repository contains a collection of Homebrew (aka, Brew) "formulae" for Baz
 
 ```
 $ brew tap bazelbuild/tap
-$ brew tap-pin bazelbuild/tap
-$ brew install bazel
-```
-
-or alternatively you can refer to formula by its full name
-
-```
 $ brew install bazelbuild/tap/bazel
 ```
 
-Please note that if an older version of bazel from homebrew-core is being installed, you will need to uninstall that and specifically install the bazelbuild/tap version, with:
+Please note that if an older version of bazel from homebrew-core is already installed, you will need to uninstall that and specifically install the bazelbuild/tap version, with:
 
 ```
 $ brew uninstall bazel
 $ brew install bazelbuild/tap/bazel
 ```
+
+Since the `brew tap-pin` command
+[has been deprecated](https://github.com/Homebrew/brew/pull/5925), you must
+always use the fully-scoped formula name `bazelbuild/tap/bazel` when referring
+to the "bazel" formula in this tap.
