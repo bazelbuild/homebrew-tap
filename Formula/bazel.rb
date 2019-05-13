@@ -15,9 +15,9 @@
 class Bazel < Formula
   desc "Fast, scalable, multi-language and extensible build system"
   homepage "https://bazel.build/"
-  url "https://releases.bazel.build/0.25.1/release/bazel-0.25.1-installer-darwin-x86_64.sh", :using => :nounzip
-  version "0.25.1"
-  sha256 "007948e6050967de32f8266c872c23087df1333bd5668d3a2d61764b9cd9e889"
+  url "https://releases.bazel.build/0.25.2/release/bazel-0.25.2-installer-darwin-x86_64.sh", :using => :nounzip
+  version "0.25.2"
+  sha256 "10ff77f7cdf29385d80770b1608dc39aa247610ee6cae627684a979e086cca13"
 
   bottle :unneeded
 
