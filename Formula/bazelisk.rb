@@ -15,13 +15,13 @@
 class Bazelisk < Formula
   desc "User-friendly launcher for Bazel"
   homepage "https://github.com/philwo/bazelisk"
-  url "https://github.com/philwo/bazelisk/releases/download/v0.0.4/bazelisk-darwin-amd64"
-  version "0.0.4"
+  url "https://github.com/philwo/bazelisk/releases/download/v0.0.5/bazelisk-darwin-amd64"
+  version "0.0.5"
 
   # To generate run:
-  # curl -L -N -s https://github.com/philwo/bazelisk/releases/download/v0.0.4/bazelisk-darwin-amd64 | shasum -a 256
+  # curl -L -N -s https://github.com/philwo/bazelisk/releases/download/v0.0.5/bazelisk-darwin-amd64 | shasum -a 256
   # on macOS
-  sha256 "c764ad27a9a7f9bd976b1b7321bfedc7d69c60f9ebdf1ad324dddd3e1f5806fe"
+  sha256 "6bfca2304cc2258578658d95a6e8dbe43d3ae5dd089076128c726cf14b8c2b8f"
 
   bottle :unneeded
 
