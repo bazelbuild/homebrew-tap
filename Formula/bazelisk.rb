@@ -15,13 +15,13 @@
 class Bazelisk < Formula
   desc "User-friendly launcher for Bazel"
   homepage "https://github.com/bazelbuild/bazelisk"
-  url "https://github.com/bazelbuild/bazelisk/releases/download/v0.0.7/bazelisk-darwin-amd64"
-  version "0.0.7"
+  url "https://github.com/bazelbuild/bazelisk/releases/download/v1.0/bazelisk-darwin-amd64"
+  version "1.0"
 
   # To generate run:
   # curl -L -N -s https://github.com/bazelbuild/bazelisk/releases/download/v0.0.7/bazelisk-darwin-amd64 | shasum -a 256
   # on macOS
-  sha256 "1d9c290e8c22dbd9d9e6899d5a66657dcf18d556d0d714854c8dba3435e2b616"
+  sha256 "198456d96731ac5032636230918d74783fb313a709ede603d73c493e10f2f995"
 
   bottle :unneeded
 
@@ -35,7 +35,7 @@ class Bazelisk < Formula
     # Simply run bazelisk to see whether it finished. Use a hardcoded version
     # number to avoid calling the GitHub API.
     touch testpath/"WORKSPACE"
-    (testpath/".bazelversion").write "0.22.0"
+    (testpath/".bazelversion").write "0.28.1"
     system bin/"bazel", "version"
   end
 end
