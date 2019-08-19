@@ -19,7 +19,7 @@ class Bazelisk < Formula
   version "1.0"
 
   # To generate run:
-  # curl -L -N -s https://github.com/bazelbuild/bazelisk/releases/download/v0.0.7/bazelisk-darwin-amd64 | shasum -a 256
+  # curl -L -N -s https://github.com/bazelbuild/bazelisk/releases/download/v1.0/bazelisk-darwin-amd64 | shasum -a 256
   # on macOS
   sha256 "198456d96731ac5032636230918d74783fb313a709ede603d73c493e10f2f995"
 
