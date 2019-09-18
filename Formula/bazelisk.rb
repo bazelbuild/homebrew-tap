@@ -28,7 +28,8 @@ class Bazelisk < Formula
   conflicts_with "bazelbuild/tap/bazel", :because => "Bazelisk replaces the bazel binary"
 
   def install
-    bin.install "bazelisk-darwin-amd64" => "bazel"
+    bin.install "bazelisk-darwin-amd64" => "bazelisk"
+    bin.install_symlink "bazelisk" => "bazel"
   end
 
   test do
@@ -37,5 +38,6 @@ class Bazelisk < Formula
     touch testpath/"WORKSPACE"
     (testpath/".bazelversion").write "0.28.1"
     system bin/"bazel", "version"
+    system bin/"bazelisk", "version"
   end
 end
