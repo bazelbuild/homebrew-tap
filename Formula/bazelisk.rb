@@ -21,7 +21,7 @@ class Bazelisk < Formula
   # To generate run:
   # curl -L -N -s https://github.com/bazelbuild/bazelisk/releases/download/v1.2.0/bazelisk-darwin-amd64 | shasum -a 256
   # on macOS
-  sha256 "6bfca2304cc2258578658d95a6e8dbe43d3ae5dd089076128c726cf14b8c2b8f"
+  sha256 "c9764d559b044a69ec860235d46c5cc7d28e98cb378dd449b7c9fe53f696aa07"
 
   bottle :unneeded
 
