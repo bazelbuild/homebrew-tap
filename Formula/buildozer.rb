@@ -1,23 +1,22 @@
 class Buildozer < Formula
   desc "A Bazel tool for changing multiple BUILD files"
   homepage "https://github.com/bazelbuild/buildtools"
-  url "https://github.com/bazelbuild/buildtools/archive/0.29.0.tar.gz"
-  sha256 "f3ef44916e6be705ae862c0520bac6834dd2ff1d4ac7e5abc61fe9f12ce7a865"
+  url "https://github.com/bazelbuild/buildtools/releases/download/0.29.0/buildozer.mac"
+  # curl --location "URL" | shasum --algorithm 256
+  sha256 "316d24478f3be8a076b7901810dbfff79e305b3ac73a93b56f30a92950e5d0d0"
 
-  depends_on "bazelisk" => :build
+  bottle :unneeded
 
   def install
-    system "bazelisk", "build", "//buildozer:buildozer"
-
-    bin.install "bazel-bin/buildozer/darwin_amd64_stripped/buildozer"
+    bin.install "buildozer.mac" => "buildozer"
   end
 
   test do
-    file_path = testpath/"BUILD"
+    build_file = testpath/"BUILD"
 
-    touch file_path
+    touch build_file
     system "#{bin}/buildozer", "new java_library brewed", "//:__pkg__"
 
-    assert_equal "java_library(name = \"brewed\")\n", file_path.read
+    assert_equal "java_library(name = \"brewed\")\n", build_file.read
   end
 end
