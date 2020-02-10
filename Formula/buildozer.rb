@@ -1,9 +1,12 @@
 class Buildozer < Formula
   desc "A Bazel tool for changing multiple BUILD files"
   homepage "https://github.com/bazelbuild/buildtools"
-  url "https://github.com/bazelbuild/buildtools/releases/download/0.29.0/buildozer.mac"
-  # curl --location "URL" | shasum --algorithm 256
-  sha256 "316d24478f3be8a076b7901810dbfff79e305b3ac73a93b56f30a92950e5d0d0"
+  url "https://github.com/bazelbuild/buildtools/releases/download/1.0.0/buildozer.mac"
+
+  # To generate run:
+  # curl -LNf "https://github.com/bazelbuild/buildtools/releases/download/1.0.0/buildozer.mac" | shasum -a 256
+  # on macOS
+  sha256 "e00f8cc4af7b0c989d9bf7f89e81e5a060a524350d0a77e5f40d90119382a841"
 
   bottle :unneeded
 
