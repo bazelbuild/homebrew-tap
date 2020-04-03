@@ -27,9 +27,20 @@ class Bazelisk < Formula
 
   conflicts_with "bazelbuild/tap/bazel", :because => "Bazelisk replaces the bazel binary"
 
+  resource "bazel_zsh_completion" do
+    url "https://raw.githubusercontent.com/bazelbuild/bazel/3.1.0/scripts/zsh_completion/_bazel"
+    # To generate run:
+    # curl -L -N -s https://raw.githubusercontent.com/bazelbuild/bazel/3.1.0/scripts/zsh_completion/_bazel | shasum -a 256
+    # on macOS
+    sha256 "d82384f75ef538c9addf4e313773b2c231b076f58b01dd24ba14f350869ecf3d"
+  end
+
   def install
     bin.install "bazelisk-darwin-amd64" => "bazelisk"
     bin.install_symlink "bazelisk" => "bazel"
+    resource("bazel_zsh_completion").stage {
+      zsh_completion.install "_bazel"
+    }
   end
 
   test do
