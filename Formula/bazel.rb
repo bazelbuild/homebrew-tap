@@ -15,13 +15,13 @@
 class Bazel < Formula
   desc "Fast, scalable, multi-language and extensible build system"
   homepage "https://bazel.build/"
-  url "https://releases.bazel.build/2.2.0/release/bazel-2.2.0-installer-darwin-x86_64.sh", :using => :nounzip
-  version "2.2.0"
+  url "https://releases.bazel.build/3.0.0/release/bazel-3.0.0-installer-darwin-x86_64.sh", :using => :nounzip
+  version "3.0.0"
   
   # To generate run:
-  # curl -LNf https://releases.bazel.build/2.2.0/release/bazel-2.2.0-installer-darwin-x86_64.sh | shasum -a 256
+  # curl -LNf https://releases.bazel.build/3.0.0/release/bazel-3.0.0-installer-darwin-x86_64.sh | shasum -a 256
   # on macOS
-  sha256 "8a0238c126d086f3641efda177fa8fc1e85ba09c2af10c0977f14b202a9e7a5a"
+  sha256 "c6109f211f932866ef86f6ed996b31910b3a74a8d5275d3d6a416dafe61c00c6"
 
   bottle :unneeded
 
