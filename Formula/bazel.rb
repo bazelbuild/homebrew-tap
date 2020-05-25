@@ -17,7 +17,7 @@ class Bazel < Formula
   homepage "https://bazel.build/"
   url "https://releases.bazel.build/3.1.0/release/bazel-3.1.0-installer-darwin-x86_64.sh", :using => :nounzip
   version "3.1.0"
-  
+
   # To generate run:
   # curl -LNf https://releases.bazel.build/3.1.0/release/bazel-3.1.0-installer-darwin-x86_64.sh | shasum -a 256
   # on macOS
