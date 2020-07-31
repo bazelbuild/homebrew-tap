@@ -1,4 +1,5 @@
 {
   "bazel": "homebrew/core",
+  "bazelisk": "homebrew/core",
   "buildozer": "homebrew/core"
 }
