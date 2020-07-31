@@ -12,3 +12,15 @@ $ brew install bazel
 ```
 $ brew upgrade bazel
 ```
+
+## Installing buildozer
+
+```sh
+$ brew install buildozer
+```
+
+## Upgrading buildozer
+
+```sh
+$ brew upgrade buildozer
+```
