@@ -15,13 +15,13 @@
 class Ibazel < Formula
   desc "Tool for building Bazel targets when source files change"
   homepage "https://github.com/bazelbuild/bazel-watcher"
-  url "https://github.com/bazelbuild/bazel-watcher/releases/download/v0.13.1/ibazel_darwin_amd64"
-  version "0.13.1"
+  url "https://github.com/bazelbuild/bazel-watcher/releases/download/v0.15.7/ibazel_darwin_amd64"
+  version "0.15.7"
 
   # To generate run:
-  # curl -L -N -s https://github.com/bazelbuild/bazel-watcher/releases/download/v0.13.1/ibazel_darwin_amd64 | shasum -a 256
+  # curl -L -N -s https://github.com/bazelbuild/bazel-watcher/releases/download/v0.15.7/ibazel_darwin_amd64 | shasum -a 256
   # on macOS
-  sha256 "a46d89eef5ad54890366621f3c94d70b891fd1fa24e7e60e0298191e488d07aa"
+  sha256 "59c7e6e0796f7dd43226abc81861e68cbf33ad5973e52a17f98ec28b24a85846"
 
   bottle :unneeded
 
