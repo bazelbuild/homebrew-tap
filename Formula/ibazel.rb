@@ -23,7 +23,6 @@ class Ibazel < Formula
   # on macOS
   sha256 "a46d89eef5ad54890366621f3c94d70b891fd1fa24e7e60e0298191e488d07aa"
 
-  bottle :unneeded
 
   def install
     bin.install "ibazel_darwin_amd64" => "ibazel"
