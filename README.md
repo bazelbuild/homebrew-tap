@@ -7,6 +7,14 @@ This repository contains a collection of Homebrew (aka, Brew) "formulae" for Baz
 $ brew install bazel
 ```
 
+To install older versions
+
+```
+brew tap bazelbuild/tap
+brew extract bazel bazelbuild/tap --version X.Y.Z
+brew install bazel@X.Y.Z
+```
+
 ## Upgrading Bazel
 
 ```sh
